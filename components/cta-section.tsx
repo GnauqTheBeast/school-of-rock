@@ -24,17 +24,21 @@ export default function CTASection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="bg-primary hover:bg-primary/90">
-            Đăng Ký Ngay
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-primary text-primary hover:bg-primary/10 bg-transparent"
-          >
-            Lên Lịch Tham Vấn
-          </Button>
+          <a href="https://www.facebook.com/GODZZHANDS" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="bg-primary hover:bg-primary/90">
+              Đăng Ký Ngay
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </a>
+          <a href="https://www.facebook.com/GODZZHANDS" target="_blank" rel="noopener noreferrer">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-primary text-primary hover:bg-primary/10 bg-transparent"
+            >
+              Lên Lịch Tham Vấn
+            </Button>
+          </a>
         </div>
       </div>
     </section>

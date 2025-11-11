@@ -11,12 +11,12 @@ export default function YouTubeSection() {
           {/* Left: Content */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center">
-                <Youtube className="w-6 h-6 text-red-500" />
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                <Youtube className="w-6 h-6 text-primary" />
               </div>
               <h2 className="text-4xl md:text-5xl font-bold">
                 Xem Kênh
-                <span className="block text-red-500">YouTube Của Chúng Tôi</span>
+                <span className="block text-primary">YouTube Của Chúng Tôi</span>
               </h2>
             </div>
 
@@ -35,7 +35,7 @@ export default function YouTubeSection() {
               >
                 <Button
                   size="lg"
-                  className="bg-red-500 hover:bg-red-600 text-white flex items-center gap-2"
+                  className="bg-primary hover:bg-primary/90 text-white flex items-center gap-2"
                 >
                   <Youtube className="w-5 h-5" />
                   Đăng Ký Kênh YouTube

@@ -1,9 +1,23 @@
 "use client"
 
-import { ArrowRight } from "lucide-react"
+import { useState, useEffect } from "react"
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+const images = [
+  "/guitarist-performing-energetic-rock-stage.jpg",
+]
+
 export default function HeroSection() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length)
+    }, 6000)
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <section className="min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center relative overflow-hidden">
       {/* Background gradient effect */}
@@ -55,12 +69,35 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative h-96 md:h-full min-h-96">
-          <img
-            src="/guitarist-performing-energetic-rock-stage.jpg"
-            alt="Guitarist performing"
-            className="w-full h-full object-cover rounded-lg border-4 border-primary/30"
-          />
+        <div className="relative h-96 md:h-full min-h-96 group">
+          <div className="relative w-full h-full overflow-hidden rounded-lg border-4 border-primary/30">
+            {/* Image */}
+            <img
+              src={images[currentIndex]}
+              alt="Guitarist performing"
+              className="w-full h-full object-cover transition-opacity duration-1000"
+            />
+
+            {/* Navigation Buttons */}
+            {images.length > 1 && (
+              <>
+                <button
+                  onClick={() => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-black/30 hover:bg-black/50 text-white transition-all opacity-0 group-hover:opacity-100"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={() => setCurrentIndex((prev) => (prev + 1) % images.length)}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-black/30 hover:bg-black/50 text-white transition-all opacity-0 group-hover:opacity-100"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </section>
