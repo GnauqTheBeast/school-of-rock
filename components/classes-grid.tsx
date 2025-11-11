@@ -11,7 +11,6 @@ const classes = [
     level: "Cấp 1-2",
     description: "Hoàn hảo cho những người mới bắt đầu. Học các nguyên tắc cơ bản, tiến hành hợp âm, và những bài hát đầu tiên.",
     icon: Music,
-    price: "2,990,000₫",
     duration: "8 tuần",
   },
   {
@@ -20,7 +19,6 @@ const classes = [
     level: "Cấp 3-4",
     description: "Phát triển kỹ năng kỹ thuật, lý thuyết âm nhạc, và bắt đầu biểu diễn các sáng tác gốc.",
     icon: Zap,
-    price: "3,490,000₫",
     duration: "10 tuần",
   },
   {
@@ -29,7 +27,6 @@ const classes = [
     level: "Cấp 5-6",
     description: "Thành thạo các kỹ thuật phức tạp, chơi ngẫu hứng, và làm chủ guitar lead để biểu diễn.",
     icon: Users,
-    price: "4,490,000₫",
     duration: "12 tuần",
   },
 ]
@@ -66,8 +63,8 @@ export default function ClassesGrid() {
                   <p className="text-muted-foreground mb-6">{cls.description}</p>
 
                   <div className="space-y-3 mb-8 pb-8 border-b border-border/50">
-                    <p className="text-2xl font-bold text-primary">{cls.price}</p>
-                    <p className="text-sm text-muted-foreground">{cls.duration}</p>
+                    <p className="text-sm text-muted-foreground">Thời gian: {cls.duration}</p>
+                    <p className="text-sm italic text-accent">Giá cả - Inbox để biết thêm chi tiết</p>
                   </div>
 
                   <Button className="w-full bg-primary hover:bg-primary/90">Đăng Ký Ngay</Button>

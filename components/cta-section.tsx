@@ -36,11 +36,6 @@ export default function CTASection() {
             Lên Lịch Tham Vấn
           </Button>
         </div>
-
-        <div className="mt-12 p-8 bg-card border border-border rounded-lg">
-          <p className="text-sm text-muted-foreground mb-3">Ưu Đãi Có Hạn</p>
-          <p className="text-2xl font-bold text-accent">Nhận 3 lớp đầu tiên với giảm 50%! 🎸</p>
-        </div>
       </div>
     </section>
   )
